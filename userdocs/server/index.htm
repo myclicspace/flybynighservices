@@ -1,0 +1,36 @@
+<HTML>
+<HEAD><TITLE>Main homepage</TITLE></HEAD>
+<BODY BGCOLOR=White>
+<FONT FACE=Arial>
+<P ALIGN=CENTER>
+<FONT SIZE=6 COLOR=BLUE><B>How to do startup server?</B></FONT>
+<BR><BR><BR>
+<P ALIGN=LEFT>
+To start the server, go to the installation directory ( make sure that db.db is in the install
+directory ) and run the following command: <BR>
+     java -jar FBNServer.jar<BR><P> 
+
+If you want to specifiy the data file and port number used by server  use the 
+run following command:<BR>
+   java -jar [-Dport=number_port] [-Ddbfile=path_and_file] FBNServer.jar <BR><P>
+
+1. Example for the port 1099<BR>
+    java -jar -Dport=1099 FBNServer.jar<BR>
+2. Example fot the port 3021 and the datafile db.db located in directory c:\test<BR>
+   java -jar -Dport=3021 -Ddbfile=c:\test\db.db FBNServer.jar<BR>
+If the ports 1099 or 3021, above, are already used on your computer, please select a <BR>
+free port ( 1024-65535 ).<BR><P>
+Note, also, if it is not specified parameters, anyway, in the command line to starting the server is used
+the default port number 1099. Also is done a trying of reading from the current working directory
+to locate the datafile db.db.<BR> If the datafile db.db is not in the current working directory
+assures that it is there or indicates its location conforms described above.<BR>
+
+Here is the ouput screen after startup the server.  <BR><P>
+<IMG SRC="STARTUP_SERVER.jpg"><BR><P>
+
+To shutdown the server type the keys CTRL and C, simultenously.<BR>
+The messages displayed on the console, also, are logged in a file called server.log in the current working directory.
+
+</BODY>
+</HTML>
+
